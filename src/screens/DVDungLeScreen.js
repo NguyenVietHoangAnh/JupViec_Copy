@@ -1,0 +1,63 @@
+import React from 'react'
+import {
+  SafeAreaView,
+  StyleSheet,
+  ScrollView,
+  View,
+  Text,
+  StatusBar,
+  Button,
+  Image,
+  TouchableOpacity, } from 'react-native'
+
+function DVDungLeScreen (props) {
+  const { navigation } = props
+  return (
+    <View style={styles.container}>
+      <Text style={styles.text}>Giúp việc nhà theo giờ làm theo khung giờ Khách hàng đăng ký khi phát sinh nhu cầu. Công việc gồm: Dọn nhà, nấu ăn, rửa bát và hỗ trợ chăm sóc trẻ.</Text>
+      <Image style={styles.image}
+        source={require('JupViec/src/assets/dungle_intro.png')}>
+      </Image>
+      <Button
+        title ='ĐẶT NGAY'
+        onPress={() => {
+            navigation.navigate('XacNhanDLScreen');
+        }}
+      />     
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#006600'
+  },
+  text: {
+    fontSize: 15,
+    textAlign: 'center',
+    margin: 20,
+    color: 'white',
+  },
+  buttonContainer: {
+    backgroundColor: 'green',
+    borderRadius: 5,
+    padding: 10,
+    margin: 20
+  },
+  buttonText: {
+    fontSize: 15,
+    color: 'white'
+  },
+  image :{
+    width: 360, height: 240,
+    marginBottom:20,
+    borderTopLeftRadius:10,
+    borderTopRightRadius:10,
+    borderBottomLeftRadius:10,
+    borderBottomRightRadius:10
+  }
+})
+export default DVDungLeScreen
